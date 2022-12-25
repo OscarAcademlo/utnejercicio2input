@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<body>
+    <textarea name="contador" id="contador" cols="30" rows="10" onpaste="contador()" onkeyup="contador()"  ></textarea>
+    <div id="resultado">Caracteres: </div>
+
+    <script>
+function contador() {
+    let total=200
+    setTimeout(function () {
+        let valor = document.getElementById('contador')
+        let respuesta = document.getElementById('resultado')
+        let cantidad = valor.value.length
+        document.getElementById('resultado').innerHTML = cantidad + ' Caracteres que te quedan '+ (total - cantidad)
+    }
+
+    )
+}
+
+    </script>
+</body>
+</html>
